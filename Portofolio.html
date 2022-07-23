@@ -199,8 +199,18 @@
       form.addEventListener('submit', e => {
         e.preventDefault()
         fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-          .then(response => console.log('Success!', response))
-          .catch(error => console.error('Error!', error.message))
+          .then(response =>
+          {
+            alert("Pesan berhasil dikirim")
+            console.log('Success!', response)
+
+          } )
+          
+          .catch(error =>{
+            alert("Gagal mengirim pesan")
+            console.error('Error!', error.message)
+
+          })
       })
     </script>
   </body>
